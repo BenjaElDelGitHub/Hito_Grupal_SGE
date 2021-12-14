@@ -1,0 +1,188 @@
+#Para probar el codigo ve comentando los métodos que no vayas a utilizar..
+
+#DICCIONARIOS
+
+#Para definir un diccionario, se encierra el listado de valores entre llaves. Las #parejas de clave y valor se separan con comas, y la clave y el valor se separan #con dos puntos.
+
+diccionario = {'nombre' : 'Carlos', 'edad' : 22, 'cursos': ['Python','Django','JavaScript'] }
+
+#Podemos acceder al elemento de un Diccionario mediante la clave de este #elemento, como veremos a continuación:
+print (diccionario)['nombre'] #Carlos
+print (diccionario)['edad']#22
+print (diccionario)['cursos'] #['Python','Django','JavaScript']
+
+#También es posible insertar una lista dentro de un diccionario. Para acceder a cada uno de los cursos usamos los índices:
+print (diccionario)['cursos'][0]#Python
+print (diccionario)['cursos'][1]#Django
+print (diccionario)['cursos'][2]#JavaScript
+
+#Para recorrer todo el Diccionario, podemos hacer uso de la estructura for:
+for key in diccionario:
+  print (key), ":", diccionario[key]
+
+
+
+#dict ()
+#Recibe como parámetro una representación de un diccionario y si es factible, #devuelve un diccionario de datos.
+dic =  dict(nombre=('nestor'), apellido=('Plasencia'), edad=22)
+
+
+
+
+#zip()
+#Recibe como parámetro dos elementos iterables, ya sea una cadena, una lista o una #tupla. Ambos parámetros deben tener el mismo número de elementos. Se devolverá #un diccionario relacionando el elemento i-esimo de cada uno de los iterables.
+dic = dict(zip('abcd',[1,2,3,4]))
+
+
+
+
+#items()
+#Devuelve una lista de tuplas, cada tupla se compone de dos elementos: el primero #será la clave y el segundo, su valor.
+dic =   {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+items = dic.items()
+
+
+
+#keys()
+#Retorna una lista de elementos, los cuales serán las claves de nuestro diccionario.
+dic =  {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+keys= dic.keys()
+
+
+
+#values()
+#Retorna una lista de elementos, que serán los valores de nuestro diccionario.
+dic =  {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+values= dic.values()
+
+
+
+#clear()
+#Elimina todos los ítems del diccionario dejándolo vacío.
+dic 1 =  {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+dic1.clean()
+
+
+
+#copy()
+#Retorna una copia del diccionario original.
+dic = {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+dic1 = dic.copy()
+
+
+
+#fromkeys()
+#Recibe como parámetros un iterable y un valor, devolviendo un diccionario que #contiene como claves los elementos del iterable con el mismo valor ingresado. Si el #valor no es ingresado, devolverá none para todas las claves.
+dic = dict.fromkeys(['a','b','c','d'],1)
+
+dic →  {(‘a’) : 1, (’b’) : 1, (‘c’) : 1 , (‘d’) : 1}
+
+#get()
+#Recibe como parámetro una clave, devuelve el valor de la clave. Si no lo encuentra, #devuelve un objeto none.
+dic = {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+valor = dic.get(‘b’) 
+
+
+
+#pop()
+#Recibe como parámetro una clave, elimina esta y devuelve su valor. Si no lo #encuentra, devuelve error.
+dic = {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+valor = dic.pop(‘b’) 
+
+
+
+
+#setdefault()
+#Funciona de dos formas. En la primera como get
+dic = {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+valor = dic.setdefault(‘a’)
+
+
+
+
+#Y en la segunda forma, nos sirve para agregar un nuevo elemento a nuestro #diccionario.
+dic = {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+valor = dic.setdefault(‘e’,5)
+
+
+
+#update()
+#Recibe como parámetro otro diccionario. Si se tienen claves iguales, actualiza el #valor de la clave repetida; si no hay claves iguales, este par clave-valor es agregado al #diccionario.
+dic 1 = {(‘a’) : 1, (’b’) : 2, (‘c’) : 3 , (‘d’) : 4}
+dic 2 = {(‘c’) : 6, (’b’) : 5, (‘e’) : 9 , (‘f’) : 10}
+dic1.update(dic 2)
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#LISTAS
+
+lista=[1,2,4.5,'platano', "manzana",[3,4]]
+print (lista)
+print (lista[3])
+print (lista[5])
+print (lista[-1][0])
+
+for element in lista:
+    print(element)
+
+lista[2]=7.5
+print(lista)
+
+lista.append([4,5])
+print(lista)
+
+lista.extend(['pedro',8,5])
+print(lista)
+
+lista.insert(0,'hola')
+print(lista)
+
+lista.pop()
+print(lista)
+
+lista.pop(0)
+print(lista)
+
+lista.reverse()
+print(lista)
+
+lista=['albacete', "jacinto", 'zaragoza', 'eugenio', 'platano','manzana']
+lista.sort()
+print(lista)
+
+lista.sort(reverse=True)
+print(lista)
+
+print(lista.count('jacinto'))
+
+print(lista.index('zaragoza'))
+
+lista=['albacete','jacinto','zaragoza','eugenio','platano','jacinto', "manzana"]
+print(lista.index('zaragoza'))
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#TUPLAS
+
+tupla = (2,'palabra',True)
+print (tupla)
+
+
+tupla2 = 2,'Perry',False
+print (tupla2)
+
+
+tupla1=(1,2,3,4,5)
+tupla2=(6,7,8,9)
+
+tuplamaxima=tupla1+tupla2
+print(tuplamaxima)
+
+
+tupla1=(1,2,3,4,5)
+print(tupla1 * 3)
+
+tuplaCont = (3,5,3,3,3,6,2,0,1,4,3)
+print(tuplaCont.count(3))
+
+
+lista = [1, 2, 3]
+tupla = tuple(lista)
+print(type(tupla))
+print(tupla) 
